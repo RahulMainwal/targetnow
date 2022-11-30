@@ -130,7 +130,6 @@ const Search = () => {
     };
   }, []);
 
-
   const searchInputHandler = (element) => {
     setSearchInput(element);
     if (value === "all") {
@@ -160,12 +159,12 @@ const Search = () => {
 
     if (value === "oneWordSubstitutes") {
       const data = gotMainData.filter((x) => {
-        return x.titleType === "oneWordSubstitutes"
-      })
+        return x.titleType === "oneWordSubstitutes";
+      });
       const sorting = data.filter((x) =>
         x.title.toLowerCase().includes(element)
       );
-      if (sorting.length > 0) {
+      if (sorting.length > 0 && element !== "") {
         setSearchInputSuggest(sorting);
       } else {
         setSearchInputSuggest([]);
@@ -174,8 +173,8 @@ const Search = () => {
 
     if (value === "idiomPhrases") {
       const data = gotMainData.filter((x) => {
-        return x.titleType === "idiomPhrases"
-      })
+        return x.titleType === "idiomPhrases";
+      });
       const sorting = data.filter((x) =>
         x.title.toLowerCase().includes(element)
       );
@@ -188,8 +187,8 @@ const Search = () => {
 
     if (value === "antonyms") {
       const data = gotMainData.filter((x) => {
-        return x.titleType === "antonyms"
-      })
+        return x.titleType === "antonyms";
+      });
       const sorting = data.filter((x) =>
         x.title.toLowerCase().includes(element)
       );
@@ -202,8 +201,8 @@ const Search = () => {
 
     if (value === "synonyms") {
       const data = gotMainData.filter((x) => {
-        return x.titleType === "synonyms"
-      })
+        return x.titleType === "synonyms";
+      });
       const sorting = data.filter((x) =>
         x.title.toLowerCase().includes(element)
       );
@@ -216,8 +215,8 @@ const Search = () => {
 
     if (value === "phrasalVerbs") {
       const data = gotMainData.filter((x) => {
-        return x.titleType === "phrasalVerbs"
-      })
+        return x.titleType === "phrasalVerbs";
+      });
       const sorting = data.filter((x) =>
         x.title.toLowerCase().includes(element)
       );
@@ -269,9 +268,7 @@ const Search = () => {
   }, []);
 
   return (
-    <div
-    id="searchbar"
-    >
+    <div id="searchbar">
       <div style={{ backgroundColor: "rgb(249, 248, 248)" }}>
         <Form>
           <div style={{ width: "100%", paddingTop: "15px", display: "flex" }}>

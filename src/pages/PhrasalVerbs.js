@@ -51,7 +51,7 @@ function PhrasalVerbs() {
   };
 
   const deleteHandler = async (element) => {
-    setElementId(element.id)
+    setElementId(element.id);
     handleShow();
   };
 
@@ -144,18 +144,29 @@ function PhrasalVerbs() {
     <Loader />
   ) : (
     <div style={{ textAlign: "start" }}>
-      <div style={{margin: "16px 0", padding: "0 16px", width: "100%", display: "flex"}}>
-        <div style={{width: "90%"}}>
-      <h2>Phrasal verbs</h2>
+      <div
+        style={{
+          margin: "16px 0",
+          padding: "0 16px",
+          width: "100%",
+          display: "flex",
+        }}
+      >
+        <div style={{ width: "90%" }}>
+          <h2>Phrasal verbs</h2>
         </div>
-        <div style={{width: "10%", textAlign: "end"}}><Badge bg="secondary">{filteredData.length}</Badge></div>
+        <div style={{ width: "10%", textAlign: "end" }}>
+          <Badge bg="secondary">{filteredData.length}</Badge>
+        </div>
       </div>
       <ListGroup style={{ margin: "20px" }} variant="flush">
-      {filteredData.reverse().map((x, index) => (
+        {filteredData.reverse().map((x, index) => (
           <div key={x.id} style={{ marginBottom: "15px" }}>
             <div style={{ width: "100%", display: "flex" }}>
               <div style={{ width: "70%" }}>
-                <Card.Title style={{fontSize: "18px", color: "grey"}}><span style={{color: "black"}}>{index+1}.</span> {x.title}</Card.Title>
+                <Card.Title style={{ fontSize: "18px", color: "grey" }}>
+                  <span style={{ color: "black" }}>{index + 1}.</span> {x.title}
+                </Card.Title>
               </div>
               <div style={{ width: "30%", textAlign: "end" }}>
                 <i
