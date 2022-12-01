@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div>
       <br />
-      <Card style={{ backgroundColor: "#f0f0f0" }} className="text-center">
+      <Card id="footer-card" className="text-center">
         <Card.Body>
           <div className="footer-col">
             <h4>Connect with me</h4>

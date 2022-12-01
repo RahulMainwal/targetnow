@@ -60,54 +60,42 @@ function Header() {
                     style={{ color: "black", textDecoration: "none" }}
                     to="vocabulary"
                   >
-                    <div style={{ width: "100%", padding: "2px 8px" }}>
-                      Vocabulary
-                    </div>
+                    <div id="english-dropdown">Vocabulary</div>
                   </NavLink>
                   <NavLink
                     onClick={() => setShow(false)}
                     style={{ color: "black", textDecoration: "none" }}
                     to="one-word-substitutes"
                   >
-                    <div style={{ width: "100%", padding: "2px 8px" }}>
-                      One word substitutes
-                    </div>
+                    <div id="english-dropdown">One word substitutes</div>
                   </NavLink>
                   <NavLink
                     onClick={() => setShow(false)}
                     style={{ color: "black", textDecoration: "none" }}
                     to="idiom-&-phrases"
                   >
-                    <div style={{ width: "100%", padding: "2px 8px" }}>
-                      Idiom & phrases
-                    </div>
+                    <div id="english-dropdown">Idiom & phrases</div>
                   </NavLink>
                   <NavLink
                     onClick={() => setShow(false)}
                     style={{ color: "black", textDecoration: "none" }}
                     to="phrasal-verbs"
                   >
-                    <div style={{ width: "100%", padding: "2px 8px" }}>
-                      Phrasal verbs
-                    </div>
+                    <div id="english-dropdown">Phrasal verbs</div>
                   </NavLink>
                   <NavLink
                     onClick={() => setShow(false)}
                     style={{ color: "black", textDecoration: "none" }}
                     to="antonyms"
                   >
-                    <div style={{ width: "100%", padding: "2px 8px" }}>
-                      Antonyms
-                    </div>
+                    <div id="english-dropdown">Antonyms</div>
                   </NavLink>
                   <NavLink
                     onClick={() => setShow(false)}
                     style={{ color: "black", textDecoration: "none" }}
                     to="synonyms"
                   >
-                    <div style={{ width: "100%", padding: "2px 8px" }}>
-                      Synonyms
-                    </div>
+                    <div id="english-dropdown">Synonyms</div>
                   </NavLink>
                 </NavDropdown>
               </li>
@@ -137,7 +125,9 @@ function Header() {
             className="justify-content-end flex-grow-1 pe-6"
             style={{ display: "block" }}
           >
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link id="nav-content" href="/">
+              Home
+            </Nav.Link>
             <NavDropdown
               title="English"
               id="offcanvasNavbarDropdown-expand"
@@ -148,52 +138,42 @@ function Header() {
                 style={{ color: "black", textDecoration: "none" }}
                 to="vocabulary"
               >
-                <div style={{ width: "100%", padding: "2px 8px" }}>
-                  Vocabulary
-                </div>
+                <div id="english-dropdown">Vocabulary</div>
               </NavLink>
               <NavLink
                 onClick={() => setShow(false)}
                 style={{ color: "black", textDecoration: "none" }}
                 to="one-word-substitutes"
               >
-                <div style={{ width: "100%", padding: "2px 8px" }}>
-                  One word substitutes
-                </div>
+                <div id="english-dropdown">One word substitutes</div>
               </NavLink>
               <NavLink
                 onClick={() => setShow(false)}
                 style={{ color: "black", textDecoration: "none" }}
                 to="idiom-&-phrases"
               >
-                <div style={{ width: "100%", padding: "2px 8px" }}>
-                  Idiom & phrases
-                </div>
+                <div id="english-dropdown">Idiom & phrases</div>
               </NavLink>
               <NavLink
                 onClick={() => setShow(false)}
                 style={{ color: "black", textDecoration: "none" }}
                 to="phrasal-verbs"
               >
-                <div style={{ width: "100%", padding: "2px 8px" }}>
-                  Phrasal verbs
-                </div>
+                <div id="english-dropdown">Phrasal verbs</div>
               </NavLink>
               <NavLink
                 onClick={() => setShow(false)}
                 style={{ color: "black", textDecoration: "none" }}
                 to="antonyms"
               >
-                <div style={{ width: "100%", padding: "2px 8px" }}>
-                  Antonyms
-                </div>
+                <div id="english-dropdown">Antonyms</div>
               </NavLink>
               <NavLink
                 onClick={() => setShow(false)}
                 style={{ color: "black", textDecoration: "none" }}
                 to="synonyms"
               >
-                <div style={{ width: "100%", padding: "2px 8px" }}>
+                <div id="english-dropdown" style={{ border: "none" }}>
                   Synonyms
                 </div>
               </NavLink>

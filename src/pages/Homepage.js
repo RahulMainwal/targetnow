@@ -67,9 +67,6 @@ function Homepage(props) {
       if (filteredTokenId === undefined) {
         alert("You are not authorized person!");
       } else {
-        // if((gotMainData.filter((x) => { return x.title === title }).length) !== 0){
-        //   alert("This title is already taken!")
-        // }else{
         await updateDoc(doc(db, "mainData", elementId), {
           titleType,
           title,
@@ -77,14 +74,8 @@ function Homepage(props) {
           timeStamp: new Date(),
         })
           .then((data) => {
-            // if(data){
             alert("Success");
-            //   setTitleType("")
-            //   setTitle("")
-            //   setDescription("")
-            //   setTokenId("")
             handleClose();
-            // }
           })
           .catch((error) => {
             if (error) {

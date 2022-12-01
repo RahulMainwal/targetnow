@@ -269,7 +269,13 @@ const Search = () => {
 
   return (
     <div id="searchbar">
-      <div style={{ backgroundColor: "rgb(249, 248, 248)" }}>
+      <div
+        style={{
+          backgroundColor: "white",
+          boxSizing: "border-box",
+          boxShadow: "0 0 10px 0 #c0c0c0",
+        }}
+      >
         <Form>
           <div style={{ width: "100%", paddingTop: "15px", display: "flex" }}>
             <div style={{ width: "70%", paddingLeft: "15px" }}>
