@@ -130,6 +130,12 @@ const Search = () => {
     };
   }, []);
 
+  if (searchInput !== "") {
+    document.body.style.overflowY = "hidden";
+  } else {
+    document.body.style.overflowY = "unset";
+  }
+
   const searchInputHandler = (element) => {
     setSearchInput(element);
     if (value === "all") {
