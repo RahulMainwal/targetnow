@@ -12,6 +12,7 @@ import Antonyms from "./pages/Antonyms";
 import Synonyms from "./pages/Synonyms";
 import AddData from "./pages/AddData";
 import Search from "./components/Search";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -22,16 +23,13 @@ function App() {
         <Routes path="/">
           <Route path="/" exact element={<Homepage />} />
           <Route path="/vocabulary" exact element={<Vocabulary />} />
-          <Route
-            path="/one-word-substitutes"
-            exact
-            element={<OneWordSubstitutes />}
-          />
+          <Route path="/one-word-substitutes" exact element={<OneWordSubstitutes />}/>
           <Route path="/idiom-&-phrases" exact element={<IdiomPhrases />} />
           <Route path="/phrasal-verbs" exact element={<PhrasalVerbs />} />
           <Route path="/antonyms" exact element={<Antonyms />} />
           <Route path="/synonyms" exact element={<Synonyms />} />
           <Route path="/add-data" exact element={<AddData />} />
+          <Route path="/*" exact element={<Error />} />
         </Routes>
         <Footer />
       </BrowserRouter>
