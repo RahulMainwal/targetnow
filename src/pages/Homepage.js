@@ -146,7 +146,7 @@ function Homepage(props) {
         <div>
           <div style={{ textAlign: "start" }}>
             <h2 style={{ margin: "16px" }}>
-              Daily vocabulary <Badge bg="danger">New</Badge>
+              Daily vocabulary <Badge bg="danger" style={{fontSize: "13px", top: "-5px", position: "inherit", zIndex: "0"}}>New</Badge>
             </h2>
             <ListGroup style={{ margin: "20px" }} variant="flush">
               {filteredData.slice(-10).map((x) => (

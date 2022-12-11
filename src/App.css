@@ -71,14 +71,31 @@
 }
 
 @media (max-width: 600px) {
-  #nav-content,
   #offcanvasNavbarDropdown-expand {
     padding: 10px 12px;
   }
-
-  #nav-content:hover,
+  
   #offcanvasNavbarDropdown-expand:hover {
     background: rgb(241, 241, 241);
+  }
+
+  #navbar-content{
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  #navbar-content:hover{
+    background: none;
+  }
+
+  #offcanvas-home {
+    background-color: white;
+    padding: 12px;
+  }
+
+  #offcanvas-home:hover {
+    background-color: rgb(241, 241, 241);
   }
 
   #english-dropdown {

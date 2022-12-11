@@ -164,7 +164,7 @@ function PhrasalVerbs() {
           <div key={x.id} style={{ marginBottom: "15px" }}>
             <div style={{ width: "100%", display: "flex" }}>
               <div style={{ width: "70%" }}>
-                <Card.Title style={{ fontSize: "18px", color: "grey" }}>
+                <Card.Title style={{ fontSize: "18px", color: "black" }}>
                   <span style={{ color: "black" }}>{index + 1}.</span> {x.title}
                 </Card.Title>
               </div>

@@ -47,13 +47,13 @@ function Header() {
           <div id="screenchanges">
             <ul style={{ display: "flex", listStyle: "none" }}>
               <li style={{ margin: "17px 20px 0 20px" }}>
-                <Nav.Link href="/">Home</Nav.Link>
+                <div><NavLink to="/" onClick={() => setShow(false)} style={{ color: "black", textDecoration: "none" }} >Home</NavLink></div>
               </li>
               <li style={{ margin: "17px 20px 0 20px" }}>
                 <NavDropdown
                   title="English"
                   id="offcanvasNavbarDropdown-expand"
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", color: "black" }}
                 >
                   <NavLink
                     onClick={() => setShow(false)}
@@ -125,9 +125,9 @@ function Header() {
             className="justify-content-end flex-grow-1 pe-6"
             style={{ display: "block" }}
           >
-            <Nav.Link id="nav-content" href="/">
-              Home
-            </Nav.Link>
+            <NavLink onClick={() => setShow(false)} id="navbar-content" to="/">
+              <div id="offcanvas-home">Home</div>
+            </NavLink>
             <NavDropdown
               title="English"
               id="offcanvasNavbarDropdown-expand"
