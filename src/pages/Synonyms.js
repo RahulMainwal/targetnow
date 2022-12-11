@@ -75,7 +75,9 @@ function Synonyms() {
           titleType,
           title,
           description,
-          timeStamp: new Date(),
+          timeStamp: `${new Date()}`,
+          date: `${(new Date()).getDate()}/${(new Date()).getMonth()+1}/${(new Date()).getFullYear()}`,
+          time: `${(new Date()).getHours()}:${(new Date()).getMinutes()}:${(new Date()).getSeconds()}`,
         })
           .then((data) => {
             // if(data){
@@ -170,7 +172,7 @@ function Synonyms() {
         </div>
       </div>
       <ListGroup style={{ margin: "20px" }} variant="flush">
-        {filteredData.reverse().map((x, index) => (
+        {filteredData.map((x, index) => (
           <div key={x.id} style={{ marginBottom: "15px" }}>
             <div style={{ width: "100%", display: "flex" }}>
               <div style={{ width: "70%" }}>

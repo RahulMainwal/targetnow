@@ -28,6 +28,7 @@ function Homepage(props) {
   const [description, setDescription] = useState("");
   const [tokenId, setTokenId] = useState("");
   const [alertTokenId, setAlertTokenId] = useState("");
+  const currentDate = `${(new Date()).getDate()}/${(new Date()).getMonth()+1}/${(new Date()).getFullYear()}`;
   const filteredTokenId = gotMainDataTokenId.find((x) => {
     return x.tokenId === tokenId;
   });
@@ -38,8 +39,11 @@ function Homepage(props) {
     setAlertTokenId("");
   };
   const handleShow = () => setShow(true);
-  const filteredData = gotMainData.filter((x) => {
+  const preDataForfilter =  gotMainData.filter((x) => {
     return x.titleType === "vocabulary";
+  })
+  const filteredData = preDataForfilter.filter((x) => {
+    return x.date === currentDate;
   });
 
   const editHandler = (element) => {
@@ -71,7 +75,9 @@ function Homepage(props) {
           titleType,
           title,
           description,
-          timeStamp: new Date(),
+          timeStamp: `${new Date()}`,
+          date: `${(new Date()).getDate()}/${(new Date()).getMonth()+1}/${(new Date()).getFullYear()}`,
+          time: `${(new Date()).getHours()}:${(new Date()).getMinutes()}:${(new Date()).getSeconds()}`,
         })
           .then((data) => {
             alert("Success");
@@ -140,16 +146,45 @@ function Homepage(props) {
     };
   }, []);
 
+
   return (
     <div>
       {loading === false ? (
         <div>
           <div style={{ textAlign: "start" }}>
             <h2 style={{ margin: "16px" }}>
-              Daily vocabulary <Badge bg="danger" style={{fontSize: "13px", top: "-5px", position: "inherit", zIndex: "0"}}>New</Badge>
+              Daily vocabulary <Badge bg="danger" style={{fontSize: "13px", top: "-4px", position: "relative", zIndex: "-1"}}>New</Badge>
             </h2>
             <ListGroup style={{ margin: "20px" }} variant="flush">
-              {filteredData.slice(-10).map((x) => (
+              {filteredData.length===0
+              ?
+              preDataForfilter.slice(-20).map((x) => (
+                <div key={x.id} style={{ marginBottom: "15px" }}>
+                  <div style={{ width: "100%", display: "flex" }}>
+                    <div style={{ width: "70%" }}>
+                      <Card.Title>{x.title}</Card.Title>
+                    </div>
+                    <div style={{ width: "30%", textAlign: "end" }}>
+                      <i
+                        className="fa fa-pen-to-square"
+                        onClick={(e) => {
+                          editHandler(x);
+                        }}
+                      ></i>
+                      &nbsp;&nbsp;&nbsp;
+                      <i
+                        className="fa fa-trash"
+                        onClick={(e) => {
+                          deleteHandler(x.id);
+                        }}
+                      ></i>
+                    </div>
+                  </div>
+                  <Card.Text>{x.description}</Card.Text>
+                </div>
+              ))
+              :
+              filteredData.map((x) => (
                 <div key={x.id} style={{ marginBottom: "15px" }}>
                   <div style={{ width: "100%", display: "flex" }}>
                     <div style={{ width: "70%" }}>

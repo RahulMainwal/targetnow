@@ -258,7 +258,7 @@ const Search = () => {
         setValue("idiomPhrases");
       }
       if (pathUrl === "/phrasal-verbs") {
-        setValue("phrasal-verbs");
+        setValue("phrasalVerbs");
       }
       if (pathUrl === "/antonyms") {
         setValue("antonyms");

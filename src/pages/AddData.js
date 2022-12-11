@@ -38,7 +38,9 @@ function AddData() {
             titleType,
             title,
             description,
-            timeStamp: new Date(),
+            timeStamp: `${new Date()}`,
+            date: `${(new Date()).getDate()}/${(new Date()).getMonth()+1}/${(new Date()).getFullYear()}`,
+            time: `${(new Date()).getHours()}:${(new Date()).getMinutes()}:${(new Date()).getSeconds()}`,
           })
             .then((data) => {
               if (data) {
