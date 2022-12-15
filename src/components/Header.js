@@ -13,9 +13,9 @@ function Header() {
   const [show, setShow] = useState(false);
 
   return (
-    <Navbar id="navbar" expand="lg">
+    <Navbar id="navbar" expand="lg" style={{background: "white"}}>
       <Container fluid>
-        <div style={{ width: "100%", padding: "0 10px", display: "flex" }}>
+        <div style={{ width: "100%", padding: "0 10px", display: "flex"}}>
           <div style={{ width: "10%" }}>
             <Nav.Link href="/">
               <img src={logo} alt="logo" width="45px" />

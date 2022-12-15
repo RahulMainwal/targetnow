@@ -320,49 +320,61 @@ const Search = () => {
       <div
         style={
           searchInput
-            ? { backgroundColor: "white", height: "85vh", overflowY: "scroll" }
+            ? { backgroundColor: "white", height: "85vh", overflowY: "scroll", borderTop: "5px solid #D9DCDC" }
             : {}
         }
       >
         {searchInputSuggest.length > 0 ? (
-          searchInputSuggest.map((x) => (
-            <div
-              key={x.id}
-              style={{
-                backgroundColor: "white",
-                padding: "8px 15px",
-                margin: "0",
-                borderBottom: "1px solid grey",
-                textAlign: "start",
-              }}
-            >
-              <div style={{ width: "100%", display: "flex" }}>
-                <div style={{ width: "70%" }}>
-                  <Card.Title>{x.title}</Card.Title>
+        <>
+        {
+            searchInputSuggest.map((x) => (
+              <div
+                key={x.id}
+                style={{
+                  backgroundColor: "white",
+                  padding: "8px 15px",
+                  margin: "0",
+                  borderBottom: "1px solid grey",
+                  textAlign: "start",
+                }}
+              >
+                <div style={{ width: "100%", display: "flex" }}>
+                  <div style={{ width: "70%" }}>
+                    <div style={{color: "GrayText"}}>{x.titleType.toUpperCase() === "ONEWORDSUBSTITUTES"? "One Word Substitute": ""}</div>
+                    <div style={{color: "GrayText"}}>{x.titleType.toUpperCase() === "VOCABULARY"? "Vocabulary": ""}</div>
+                    <div style={{color: "GrayText"}}>{x.titleType.toUpperCase() === "IDIOMPHRASES"? "Idiom & Phrase": ""}</div>
+                    <div style={{color: "GrayText"}}>{x.titleType.toUpperCase() === "ANTONYMS"? "Antonym": ""}</div>
+                    <div style={{color: "GrayText"}}>{x.titleType.toUpperCase() === "SYNONYMS"? "Synonym": ""}</div>
+                    <div style={{color: "GrayText"}}>{x.titleType.toUpperCase() === "PHRASALVERBS"? "Phrasal Verb": ""}</div>
+                  </div>
+                  <div style={{ width: "30%", textAlign: "end" }}>
+                    <i
+                      className="fa fa-pen-to-square"
+                      onClick={(e) => {
+                        editHandler(x);
+                      }}
+                    ></i>
+                    &nbsp;&nbsp;&nbsp;
+                    <i
+                      className="fa fa-trash"
+                      onClick={(e) => {
+                        deleteHandler(x.id);
+                      }}
+                    ></i>
+                  </div>
                 </div>
-                <div style={{ width: "30%", textAlign: "end" }}>
-                  <i
-                    className="fa fa-pen-to-square"
-                    onClick={(e) => {
-                      editHandler(x);
-                    }}
-                  ></i>
-                  &nbsp;&nbsp;&nbsp;
-                  <i
-                    className="fa fa-trash"
-                    onClick={(e) => {
-                      deleteHandler(x.id);
-                    }}
-                  ></i>
-                </div>
+                <Card.Title style={{color: "darkBlue", fontSize: "18px"}}>{x.title}</Card.Title>
+                <Card.Text >{x.description}</Card.Text>
               </div>
-              <Card.Text>{x.description}</Card.Text>
-            </div>
-          ))
-        ) : searchInput === "" ? (
+            ))
+        }
+        <br/><br/><br/><br/><br/><br/>
+        </>
+        )
+        : searchInput === "" ? (
           <></>
         ) : (
-          <div style={{ paddingTop: "40vh" }}>No seach found</div>
+          <div style={{ paddingTop: "10vh" }}>No seach found</div>
         )}
       </div>
 

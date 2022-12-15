@@ -19,6 +19,7 @@ code {
   margin: auto auto -50px auto;
   text-align: center;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
