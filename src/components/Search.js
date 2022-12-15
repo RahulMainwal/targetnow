@@ -140,7 +140,7 @@ const Search = () => {
     setSearchInput(element);
     if (value === "all") {
       const sorting = gotMainData.filter((x) =>
-        x.title.toLowerCase().includes(element.toLowerCase())
+        x.title.toLowerCase().includes(element.toLowerCase())  || x.description.toLowerCase().includes(element.toLowerCase())
       );
       if (sorting.length > 0 && element !== "") {
         setSearchInputSuggest(sorting);
@@ -154,7 +154,7 @@ const Search = () => {
         x.titleType.toLowerCase().includes("vocabulary")
       );
       const sorting = data.filter((x) =>
-        x.title.toLowerCase().includes(element.toLowerCase())
+        x.title.toLowerCase().includes(element.toLowerCase())  || x.description.toLowerCase().includes(element.toLowerCase())
       );
       if (sorting.length > 0 && element !== "") {
         setSearchInputSuggest(sorting);
@@ -168,7 +168,7 @@ const Search = () => {
         return x.titleType === "oneWordSubstitutes";
       });
       const sorting = data.filter((x) =>
-        x.title.toLowerCase().includes(element.toLowerCase())
+        x.title.toLowerCase().includes(element.toLowerCase())  || x.description.toLowerCase().includes(element.toLowerCase())
       );
       if (sorting.length > 0 && element !== "") {
         setSearchInputSuggest(sorting);
@@ -182,7 +182,7 @@ const Search = () => {
         return x.titleType === "idiomPhrases";
       });
       const sorting = data.filter((x) =>
-        x.title.toLowerCase().includes(element.toLowerCase())
+        x.title.toLowerCase().includes(element.toLowerCase())  || x.description.toLowerCase().includes(element.toLowerCase())
       );
       if (sorting.length > 0 && element !== "") {
         setSearchInputSuggest(sorting);
@@ -196,7 +196,7 @@ const Search = () => {
         return x.titleType === "antonyms";
       });
       const sorting = data.filter((x) =>
-        x.title.toLowerCase().includes(element.toLowerCase())
+        x.title.toLowerCase().includes(element.toLowerCase())  || x.description.toLowerCase().includes(element.toLowerCase())
       );
       if (sorting.length > 0 && element !== "") {
         setSearchInputSuggest(sorting);
@@ -210,7 +210,7 @@ const Search = () => {
         return x.titleType === "synonyms";
       });
       const sorting = data.filter((x) =>
-        x.title.toLowerCase().includes(element.toLowerCase())
+        x.title.toLowerCase().includes(element.toLowerCase())  || x.description.toLowerCase().includes(element.toLowerCase())
       );
       if (sorting.length > 0 && element !== "") {
         setSearchInputSuggest(sorting);
@@ -224,7 +224,7 @@ const Search = () => {
         return x.titleType === "phrasalVerbs";
       });
       const sorting = data.filter((x) =>
-        x.title.toLowerCase().includes(element.toLowerCase())
+        x.title.toLowerCase().includes(element.toLowerCase())  || x.description.toLowerCase().includes(element.toLowerCase())
       );
       if (sorting.length > 0 && element !== "") {
         setSearchInputSuggest(sorting);
@@ -320,7 +320,7 @@ const Search = () => {
       <div
         style={
           searchInput
-            ? { backgroundColor: "white", height: "85vh", overflowY: "scroll", borderTop: "5px solid #D9DCDC" }
+            ? { backgroundColor: "white", height: "85vh", overflowY: "scroll", borderTop: "5px solid #D9DCDC"}
             : {}
         }
       >
