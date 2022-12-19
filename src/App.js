@@ -17,7 +17,7 @@ import Error from "./pages/Error";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter id="pattern">
         <Header />
         <Search />
         <Routes path="/">

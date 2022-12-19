@@ -157,9 +157,9 @@ function Header() {
               <NavLink
                 onClick={() => setShow(false)}
                 style={{ color: "black", textDecoration: "none" }}
-                to="phrasal-verbs"
+                to="synonyms"
               >
-                <div id="english-dropdown">Phrasal verbs</div>
+                <div id="english-dropdown">Synonyms</div>
               </NavLink>
               <NavLink
                 onClick={() => setShow(false)}
@@ -171,10 +171,10 @@ function Header() {
               <NavLink
                 onClick={() => setShow(false)}
                 style={{ color: "black", textDecoration: "none" }}
-                to="synonyms"
+                to="phrasal-verbs"
               >
                 <div id="english-dropdown" style={{ border: "none" }}>
-                  Synonyms
+                Phrasal verbs
                 </div>
               </NavLink>
             </NavDropdown>

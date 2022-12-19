@@ -159,7 +159,7 @@ function Homepage(props) {
               {filteredData.length===0
               ?
               preDataForfilter.slice(-20).map((x) => (
-                <div key={x.id} style={{ marginBottom: "15px" }}>
+                <div key={x.id} style={{ marginBottom: "15px", padding: "8px 10px", borderRadius: "5px", boxShadow: "2px 2px 6px 2px #e5e5df" }}>
                   <div style={{ width: "100%", display: "flex" }}>
                     <div style={{ width: "70%" }}>
                       <Card.Title>{x.title}</Card.Title>
@@ -185,7 +185,7 @@ function Homepage(props) {
               ))
               :
               filteredData.map((x) => (
-                <div key={x.id} style={{ marginBottom: "15px" }}>
+                <div key={x.id} style={{ marginBottom: "15px", padding: "8px 10px", borderRadius: "5px", boxShadow: "2px 2px 6px 2px #e5e5df" }}>
                   <div style={{ width: "100%", display: "flex" }}>
                     <div style={{ width: "70%" }}>
                       <Card.Title>{x.title}</Card.Title>

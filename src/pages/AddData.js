@@ -114,6 +114,7 @@ function AddData() {
               setTitle(e.target.value);
             }}
           />
+           <div style={{width: "100%", marginTop: "5px"}}>{title==="" || (gotMainData.filter((x) => {return x.title.toLowerCase().includes(title.toLowerCase())})).length === 0?title===""?"":<span style={{color: "darkgreen"}}><i className="fa-solid fa-check"></i>&nbsp;&nbsp;<span>Accepted</span></span>:<span style={{color: "red"}}><i className="fa-solid fa-xmark"></i>&nbsp;&nbsp;Title already taken!</span>}</div>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Description</Form.Label>

@@ -165,7 +165,7 @@ function OneWordSubstitutes() {
       </div>
       <ListGroup style={{ margin: "20px" }} variant="flush">
         {filteredData.map((x, index) => (
-          <div key={x.id} style={{ marginBottom: "15px" }}>
+          <div key={x.id} style={{ marginBottom: "15px", padding: "8px 10px", borderRadius: "5px", boxShadow: "2px 2px 6px 2px #e5e5df" }}>
             <div style={{ width: "100%", display: "flex" }}>
               <div style={{ width: "70%" }}>
                 <Card.Title style={{ fontSize: "18px", color: "black" }}>
