@@ -111,7 +111,7 @@ function Header() {
                     className="me-2 mb-2"
                     onClick={() => setShow(false)}
                   >
-                    Add data
+                    Add New
                   </Button>
                 </NavLink>
               </li>
@@ -189,14 +189,14 @@ function Header() {
                 {
                   access
                   ?
-            <NavLink to="/login">
+            <NavLink to="/add-data">
               <Button
                 style={{ width: "100%" }}
                 variant="dark"
                 className="me-2 mb-2"
                 onClick={() => setShow(false)}
               >
-                Login
+                Add New
               </Button>
             </NavLink>
             :
