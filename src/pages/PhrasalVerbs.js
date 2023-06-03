@@ -21,17 +21,6 @@ function PhrasalVerbs() {
   const filteredData = gotMainData.filter((x) => {
     return x.titleType === "phrasalVerbs";
   });
-  
-    
-   console.log(filteredData.map((x)=> {
-    return {
-    id: x.id,
-    title: x.title,
-    description: x.description,
-    date: "1-5-2023"
-    }
-  }))
-  
   const [elementId, setElementId] = useState("");
   const [gotMainDataTokenId, setgotMainDataTokenId] = useState([]);
   const [show, setShow] = useState(false);
