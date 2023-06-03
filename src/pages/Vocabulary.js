@@ -21,6 +21,7 @@ function Vocabulary() {
   const filteredData = gotMainData.filter((x) => {
     return x.titleType === "vocabulary";
   });
+  console.log(filteredData)
   const [elementId, setElementId] = useState("");
   const [gotMainDataTokenId, setgotMainDataTokenId] = useState([]);
   const [show, setShow] = useState(false);
