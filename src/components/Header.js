@@ -72,7 +72,7 @@ function Header() {
                 <NavDropdown
                   title="English"
                   id="offcanvasNavbarDropdown-expand"
-                  style={{ width: "100%", color: "black" }}
+                  style={{ width: "100%", color: "black", marginRight: "20px" }}
                 >
                   <NavLink
                     onClick={() => setShow(false)}
