@@ -47,6 +47,24 @@ function Header() {
           </div>
           <div id="screenchanges">
             <ul style={{ display: "flex", listStyle: "none" }}>
+              {
+                  access
+                  ?
+              <li style={{ margin: "10px 20px 0 20px" }}>
+                <NavLink to="/add-data">
+                  <Button
+                    style={{ width: "100px" }}
+                    variant="dark"
+                    className="me-2 mb-2"
+                    onClick={() => setShow(false)}
+                  >
+                    Add New
+                  </Button>
+                </NavLink>
+              </li>
+              :
+              ""
+              }
               <li style={{ margin: "17px 20px 0 20px" }}>
                 <div><NavLink to="/" onClick={() => setShow(false)} style={{ color: "black", textDecoration: "none" }} >Home</NavLink></div>
               </li>
@@ -100,24 +118,6 @@ function Header() {
                   </NavLink>
                 </NavDropdown>
               </li>
-              {
-                  access
-                  ?
-              <li style={{ margin: "10px 20px 0 20px" }}>
-                <NavLink to="/add-data">
-                  <Button
-                    style={{ width: "100px" }}
-                    variant="dark"
-                    className="me-2 mb-2"
-                    onClick={() => setShow(false)}
-                  >
-                    Add New
-                  </Button>
-                </NavLink>
-              </li>
-              :
-              ""
-              }
             </ul>
           </div>
         </div>
@@ -185,7 +185,7 @@ function Header() {
                 </div>
               </NavLink>
             </NavDropdown>
-            // <br />
+            <br />
                 {
                   access
                   ?
