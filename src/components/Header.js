@@ -14,7 +14,7 @@ function Header() {
   const access = JSON.parse(localStorage.getItem("token"));
 
   return (
-    <Navbar id="navbar" expand="lg" style={{background: "white"}}>
+    <Navbar id="navbar" expand="lg" style={{background: "white", width: "100%"}}>
       <Container fluid>
         <div style={{ width: "100%", padding: "0 10px", display: "flex"}}>
           <div style={{ width: "10%" }}>
